@@ -28,6 +28,15 @@ async def lifespan(app: FastAPI):
     # Startup tasks
     logger.info("Initializing Signal Clone backend server...")
     
+    # Auto-seed the database on startup (Perfect for Render Free Tier ephemeral disks)
+    try:
+        from app.seed.seed_db import seed
+        logger.info("Auto-seeding database for demo purposes...")
+        seed()
+        logger.info("Database auto-seeded successfully!")
+    except Exception as e:
+        logger.error(f"Failed to auto-seed database: {e}")
+        
     # We can run a periodic background task to delete expired disappearing messages
     import asyncio
     from app.db.session import SessionLocal
