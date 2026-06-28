@@ -37,7 +37,8 @@ export const useSocket = () => {
     }
 
     // Connect to server socket.io
-    const socket = io('http://localhost:8000', {
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL.replace('/api', '') : 'http://localhost:8000';
+    const socket = io(baseUrl, {
       auth: {
         token: `Bearer ${accessToken}`
       },
