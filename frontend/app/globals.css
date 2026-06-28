@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1c1c1e;
+  --sidebar: #f6f6f6;
+  --sidebar-border: #e9e9e9;
+  --border: #e9e9e9;
+  --primary: #3a76f0; /* Signal blue */
+  --primary-foreground: #ffffff;
+  --muted: #f4f4f5;
+  --muted-foreground: #8e8e93;
+  --accent: #3a76f0;
+  --sent-bubble: #3a76f0;
+  --received-bubble: #f2f2f2;
+  --received-bubble-text: #1c1c1e;
+  --card: #ffffff;
+  --popover: #ffffff;
+  --popover-border: #e9e9e9;
+}
+
+.dark {
+  --background: #111315;
+  --foreground: #f4f4f5;
+  --sidebar: #202225;
+  --sidebar-border: #2b2d31;
+  --border: #2b2d31;
+  --primary: #3b82f6; /* Signal blue */
+  --primary-foreground: #ffffff;
+  --muted: #202225;
+  --muted-foreground: #a1a1aa;
+  --accent: #3b82f6;
+  --sent-bubble: #3b82f6;
+  --received-bubble: #2d2f34;
+  --received-bubble-text: #e4e4e7;
+  --card: #111315;
+  --popover: #202225;
+  --popover-border: #2b2d31;
+}
+
+@theme {
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-sent-bubble: var(--sent-bubble);
+  --color-received-bubble: var(--received-bubble);
+  --color-received-bubble-text: var(--received-bubble-text);
+  --color-card: var(--card);
+  --color-popover: var(--popover);
+  --color-popover-border: var(--popover-border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Custom Scrollbar for Chat */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.25);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.45);
+}
