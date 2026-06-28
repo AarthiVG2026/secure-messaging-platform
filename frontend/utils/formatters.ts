@@ -1,10 +1,12 @@
 export const formatTime = (isoString: string) => {
-  const d = new Date(isoString);
+  const dateStr = isoString.endsWith('Z') || isoString.includes('+') ? isoString : `${isoString}Z`;
+  const d = new Date(dateStr);
   return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 };
 
 export const formatDateLabel = (isoString: string) => {
-  const dateObj = new Date(isoString);
+  const dateStr = isoString.endsWith('Z') || isoString.includes('+') ? isoString : `${isoString}Z`;
+  const dateObj = new Date(dateStr);
   const today = new Date();
   const yesterday = new Date();
   yesterday.setDate(today.getDate() - 1);
