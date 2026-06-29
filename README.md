@@ -1,6 +1,6 @@
 <div align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Signal_Logo.svg" alt="Signal Logo" width="100"/>
-  <h1>Signal Clone</h1>
+  <h1>Secure Messaging Platform</h1>
   <p><em>A production-grade, real-time messaging platform inspired by Signal Desktop.</em></p>
 
   [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
@@ -90,7 +90,7 @@ For more details, see the [System Architecture Guide](./SYSTEM_ARCHITECTURE.md).
 ## 📂 Folder Structure
 
 ```text
-signal-clone/
+secure-messaging-platform/
 ├── frontend/                 # Next.js Application
 │   ├── app/                  # App Router pages (login, register, main)
 │   ├── components/           # Reusable UI components (Sidebar, Chat, Modals)
