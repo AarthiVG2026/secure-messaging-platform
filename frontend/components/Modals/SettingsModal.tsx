@@ -11,6 +11,19 @@ interface SettingsModalProps {
 export default function SettingsModal({ onClose }: SettingsModalProps) {
   const { user } = useAuthStore();
   const [activeTab, setActiveTab] = useState('profile');
+  const [currentTheme, setCurrentTheme] = useState(
+    typeof window !== 'undefined' ? localStorage.getItem('theme') || 'dark' : 'dark'
+  );
+
+  const handleThemeChange = (theme: 'light' | 'dark') => {
+    setCurrentTheme(theme);
+    localStorage.setItem('theme', theme);
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  };
   const tabs = [
     { id: 'profile', label: 'Profile', icon: User },
     { id: 'appearance', label: 'Appearance', icon: Moon },
@@ -124,18 +137,20 @@ export default function SettingsModal({ onClose }: SettingsModalProps) {
                   <div className="space-y-6">
                     <div>
                       <h4 className="font-semibold mb-3">Theme</h4>
-                      <div className="grid grid-cols-3 gap-4">
-                        <button className="flex flex-col items-center gap-2 p-4 border border-border rounded-xl hover:bg-muted focus:border-primary">
-                          <Monitor className="h-8 w-8 text-muted-foreground" />
-                          <span className="text-sm font-medium">System</span>
-                        </button>
-                        <button className="flex flex-col items-center gap-2 p-4 border border-border rounded-xl hover:bg-muted focus:border-primary bg-white text-black">
-                          <Moon className="h-8 w-8" />
+                      <div className="grid grid-cols-2 gap-4">
+                        <button 
+                          onClick={() => handleThemeChange('light')}
+                          className={`flex flex-col items-center gap-2 p-4 border rounded-xl hover:bg-muted transition-colors bg-white text-black ${currentTheme === 'light' ? 'border-primary border-2' : 'border-border'}`}
+                        >
+                          <Monitor className="h-8 w-8" />
                           <span className="text-sm font-medium">Light</span>
                         </button>
-                        <button className="flex flex-col items-center gap-2 p-4 border border-primary rounded-xl hover:bg-muted/50 bg-slate-950 text-white">
+                        <button 
+                          onClick={() => handleThemeChange('dark')}
+                          className={`flex flex-col items-center gap-2 p-4 border rounded-xl hover:bg-muted transition-colors bg-slate-950 text-white ${currentTheme === 'dark' ? 'border-primary border-2' : 'border-border'}`}
+                        >
                           <Moon className="h-8 w-8" />
-                          <span className="text-sm font-medium text-primary">Dark</span>
+                          <span className="text-sm font-medium">Dark</span>
                         </button>
                       </div>
                     </div>
