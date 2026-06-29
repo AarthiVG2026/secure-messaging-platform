@@ -12,6 +12,12 @@
 
 <br />
 
+## 🎥 Video Demonstration
+Click the thumbnail below to watch a full video walkthrough of the application:
+
+[![Signal Clone Demo Video](https://img.youtube.com/vi/tIC5RQT4fTY/maxresdefault.jpg)](https://youtu.be/tIC5RQT4fTY?si=wbIKYGRc1-hJXCNy)
+
+<br />
 > **Note:** This is a demonstration project built to showcase a full-stack real-time messaging architecture. It uses **mocked authentication** and **simulated encryption** for ease of evaluation. No real SMS integration is present.
 
 ## 📖 Project Overview
