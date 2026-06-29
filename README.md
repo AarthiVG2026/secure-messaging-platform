@@ -15,14 +15,14 @@
 ## 🎥 Video Demonstration
 Click the thumbnail below to watch a full video walkthrough of the application:
 
-[![Signal Clone Demo Video](https://img.youtube.com/vi/tIC5RQT4fTY/0.jpg)](https://youtu.be/tIC5RQT4fTY?si=wbIKYGRc1-hJXCNy)
+[![Secure Messaging Platform Demo Video](https://img.youtube.com/vi/tIC5RQT4fTY/0.jpg)](https://youtu.be/tIC5RQT4fTY?si=wbIKYGRc1-hJXCNy)
 
 <br />
 > **Note:** This is a demonstration project built to showcase a full-stack real-time messaging architecture. It uses **mocked authentication** and **simulated encryption** for ease of evaluation. No real SMS integration is present.
 
 ## 📖 Project Overview
 
-This project is a highly polished, full-stack clone of the Signal Desktop messaging application. It was built to demonstrate a production-ready messaging architecture using modern technologies. The application focuses on providing a snappy, reliable, and aesthetically pleasing user experience while maintaining a robust, scalable backend architecture.
+This project is a highly polished, full-stack Secure Messaging Platform. It was built to demonstrate a production-ready messaging architecture using modern technologies. The application focuses on providing a snappy, reliable, and aesthetically pleasing user experience while maintaining a robust, scalable backend architecture.
 
 ### Motivation
 The goal of this project was to replicate the complex real-time state management, WebSocket communication, and professional UI/UX of a world-class messaging application like Signal, demonstrating the ability to handle distributed state across a client-server architecture.
@@ -288,7 +288,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙏 Acknowledgements
 
-- **Signal Foundation:** For building an incredible, privacy-first messaging application that served as the inspiration for this clone.
+- **Signal Foundation:** For building an incredible, privacy-first messaging application that served as the inspiration for this project.
 - **Next.js & FastAPI Teams:** For creating the best-in-class frameworks for modern web development.
 - **Shadcn UI & Lucide:** For the beautiful design system tokens and icons.
 
